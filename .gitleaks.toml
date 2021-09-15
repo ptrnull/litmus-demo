@@ -1,0 +1,7 @@
+[[rules]]
+  description = "public secret"
+  regex = '''JWTsecret(.{0,20})([0-9a-zA-Z-._{}$\/\+=]{20,120})'''
+  tags = ["secret", "example"]
+  [rules.allowlist]
+    description = "41 base64 characters regex"
+    regexes = ['''[A-Za-z0-9\\+=]{17}''']
